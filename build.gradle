@@ -8,10 +8,12 @@ repositories {
 }
 
 def allureVersion = "2.17.3",
-    appiumVersion = "7.0.0",
+    allureRestVersion = "2.21.0",
+    appiumVersion = "8.0.0",
     restAssured = "4.5.1",
     junitVersion = "5.8.2",
-    slf4jVersion = "1.7.32"
+    slf4jVersion = "1.7.32",
+    selenideVersion = "6.11.0"
 
 allure {
     report {
@@ -30,6 +32,8 @@ allure {
 dependencies {
     testImplementation(
             "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.qameta.allure:allure-rest-assured:$allureRestVersion",
+            "com.codeborne:selenide:$selenideVersion",
             "io.appium:java-client:$appiumVersion",
             "io.rest-assured:rest-assured:$restAssured",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
