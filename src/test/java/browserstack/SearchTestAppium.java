@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class SearchTest {
+public class SearchTestAppium {
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
