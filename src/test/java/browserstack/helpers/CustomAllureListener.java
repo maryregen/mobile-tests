@@ -1,4 +1,4 @@
-package helpers;
+package browserstack.helpers;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 

@@ -1,7 +1,10 @@
-package helpers;
+package browserstack.helpers;
 
-import static helpers.CustomAllureListener.withCustomTemplates;
+import browserstack.configs.AuthConfig;
+
+import static browserstack.helpers.CustomAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.proxy;
 import static java.lang.String.format;
 
     public class Browserstack {
@@ -12,7 +15,7 @@ import static java.lang.String.format;
             return given()
                     .log().all()
                     .filter(withCustomTemplates())
-                    .auth().basic("bsuser_IW4HJ6", "xTkxQA8hziLM1BszqfVe")
+                    .auth().basic(proxy.getUsername(), proxy.getPassword())
                     .when()
                     .get(url)
                     .then()
