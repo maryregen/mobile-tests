@@ -1,8 +1,10 @@
 package browserstack.tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -14,46 +16,43 @@ public class SearchTestSelenide extends TestBase {
     String searchCriteria = "java";
 
         @Test
+        @Tag("android")
         void successfulSearchTest() {
-
-            System.setProperty("platform", "android");
-
             step("Type search", () -> {
                 $(accessibilityId("Search Wikipedia")).click();
                 $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchCriteria);
             });
-            step("Verify content found", () ->
+            step("Verify content found", () -> {
                     $$(id("org.wikipedia.alpha:id/page_list_item_title"))
-                            .shouldHave(sizeGreaterThan(0)));
+                            .shouldHave(sizeGreaterThan(0));
+            });
         }
 
         @Test
+        @Tag("android")
          void openSearchResult(){
-
-            System.setProperty("platform", "android");
-
             step("Type search", () -> {
                 $(accessibilityId("Search Wikipedia")).click();
                 $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchCriteria);
             });
-            step("Open search result", () ->
-                    $(id("org.wikipedia.alpha:id/page_list_item_title")).click());
+            step("Open search result", () -> {
+                    $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
+            });
         }
 
         @Test
-        void verifyContentOnResultPage(){
-
-            System.setProperty("platform", "ios");
-
-            step("Type search", () -> {
-                $(accessibilityId("Search Wikipedia")).click();
-                $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchCriteria);
+        @Tag("ios")
+        void verifyContentOnResultPage() {
+            step("Click text button", () -> {
+                $(id("Text Button")).click();
             });
-            step("Open search result", () ->
-                    $(id("org.wikipedia.alpha:id/page_list_item_title")).click());
-            step("Verify content found", () ->
-                    $$(byText("java"))
-                            .shouldHave(sizeGreaterThan(0)));
+            step("Search information", () -> {
+                $(id("Text Input")).click();
+                $(id("Text Input")).sendKeys(searchCriteria);
+                $(id("Text Input")).pressEnter();
+            });
+            step("Verify content found", () -> {
+                $(id("Text Output")).shouldHave(text(searchCriteria));
+        });
         }
-
 }

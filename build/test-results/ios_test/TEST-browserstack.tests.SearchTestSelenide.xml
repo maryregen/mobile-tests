@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="browserstack.tests.SearchTestSelenide" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-16T18:39:47" hostname="MacBook-Pro-2.local" time="38.33">
+  <properties/>
+  <testcase name="verifyContentOnResultPage()" classname="browserstack.tests.SearchTestSelenide" time="38.33"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[мар. 16, 2023 9:39:47 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+мар. 16, 2023 9:39:48 PM org.openqa.selenium.remote.RemoteWebDriver checkNonW3CCapabilities
+WARNING: Support for Legacy Capabilities is deprecated; You are sending the following invalid capabilities: [app, browserstack.key, browserstack.user, build, device, name, os_version, project]; Please update to W3C Syntax: https://www.selenium.dev/blog/2022/legacy-protocol-support/
+мар. 16, 2023 9:40:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+WARNING: Support for Legacy Capabilities is deprecated; You are sending the following invalid capabilities: [app, browserstack.key, browserstack.user, build, device, name, os_version, project]; Please update to W3C Syntax: https://www.selenium.dev/blog/2022/legacy-protocol-support/
+]]></system-err>
+</testsuite>

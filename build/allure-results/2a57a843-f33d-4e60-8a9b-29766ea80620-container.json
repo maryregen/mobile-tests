@@ -1,0 +1,1 @@
+{"uuid":"2a57a843-f33d-4e60-8a9b-29766ea80620","name":"SearchTestSelenide","children":["22e3f61e-07d0-4611-8767-f84bd3431dd2"],"befores":[{"name":"beforeAll","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1678987746960,"stop":1678987746980}],"afters":[],"start":1678987746916,"stop":1678987782529}

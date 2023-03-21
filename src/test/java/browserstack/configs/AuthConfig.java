@@ -7,14 +7,9 @@ import org.aeonbits.owner.Config;
 })
 
 public interface AuthConfig extends Config {
-
-    @Key("browserstack.user")
+    @Key("user")
     String getUser();
 
-    @Key("browserstack.key")
+    @Key("password")
     String getPassword();
-
-    @Key("app")
-    String getApp();
-
 }

@@ -48,6 +48,7 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
+    environment "platform", "android"
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
@@ -56,5 +57,18 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+task android_test(type: Test) {
+    environment "platform", "android"
+    useJUnitPlatform {
+        includeTags 'android'
+    }
+}
+
+task ios_test(type: Test) {
+    environment "platform", "ios"
+    useJUnitPlatform {
+        includeTags 'ios'
     }
 }

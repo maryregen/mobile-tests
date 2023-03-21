@@ -7,7 +7,6 @@ import org.aeonbits.owner.Config;
 })
 
 public interface ProjectConfig extends Config {
-
     @Key("project")
     String getProject();
 
@@ -17,7 +16,6 @@ public interface ProjectConfig extends Config {
     @Key("name")
     String getName();
 
-    @Key("remote.url")
+    @Key("remoteUrl")
     String getRemoteUrl();
-
 }

@@ -7,11 +7,12 @@ import org.aeonbits.owner.Config;
 })
 
 public interface MobileConfig extends Config {
-
-    @Key("platform.version")
+    @Key("platformVersion")
     String getPlatformVersion();
 
-    @Key("device.name")
+    @Key("deviceName")
     String getDeviceName();
 
+    @Key("app")
+    String getApp();
 }

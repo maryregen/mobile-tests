@@ -35,7 +35,7 @@ import static com.codeborne.selenide.Selenide.open;
 
             closeWebDriver();
 
-            Attach.addVideo(sessionId);
+            //Attach.addVideo(sessionId);
         }
 
     }
