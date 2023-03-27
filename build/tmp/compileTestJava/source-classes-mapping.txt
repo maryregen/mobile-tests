@@ -1,0 +1,22 @@
+mobile/configs/MobileConfig.java
+ mobile.configs.MobileConfig
+mobile/configs/AuthConfig.java
+ mobile.configs.AuthConfig
+mobile/tests/local/LocalAndroidTest.java
+ mobile.tests.local.LocalAndroidTest
+mobile/helpers/CustomAllureListener.java
+ mobile.helpers.CustomAllureListener
+mobile/tests/TestBase.java
+ mobile.tests.TestBase
+mobile/drivers/EmulationMobileDriver.java
+ mobile.drivers.EmulationMobileDriver
+mobile/helpers/Browserstack.java
+ mobile.helpers.Browserstack
+mobile/tests/browserstack/SearchTestSelenide.java
+ mobile.tests.browserstack.SearchTestSelenide
+mobile/configs/ProjectConfig.java
+ mobile.configs.ProjectConfig
+mobile/drivers/BrowserstackMobileDriver.java
+ mobile.drivers.BrowserstackMobileDriver
+mobile/helpers/Attach.java
+ mobile.helpers.Attach
