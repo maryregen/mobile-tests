@@ -1,5 +1,6 @@
-package browserstack.tests;
+package mobile.tests.browserstack;
 
+import mobile.tests.TestBase;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 

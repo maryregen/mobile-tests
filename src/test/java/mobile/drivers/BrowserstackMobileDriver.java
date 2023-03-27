@@ -1,14 +1,13 @@
-package browserstack.drivers;
+package mobile.drivers;
 
-import browserstack.configs.AuthConfig;
-import browserstack.configs.MobileConfig;
-import browserstack.configs.ProjectConfig;
+import mobile.configs.AuthConfig;
+import mobile.configs.MobileConfig;
+import mobile.configs.ProjectConfig;
 import com.codeborne.selenide.WebDriverProvider;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javax.annotation.Nonnull;

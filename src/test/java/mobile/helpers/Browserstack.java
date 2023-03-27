@@ -1,8 +1,6 @@
-package browserstack.helpers;
+package mobile.helpers;
 
-import browserstack.configs.AuthConfig;
-
-import static browserstack.helpers.CustomAllureListener.withCustomTemplates;
+import static mobile.helpers.CustomAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.proxy;
 import static java.lang.String.format;

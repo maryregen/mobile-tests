@@ -1,1 +1,1 @@
-{"name":"Gradle","type":"gradle","taskName":"android_test","buildName":"mobile-tests","projectPath":":","projectVersion":"unspecified"}
+{"name":"Gradle","type":"gradle","taskName":"emulation_test","buildName":"mobile-tests","projectPath":":","projectVersion":"unspecified"}

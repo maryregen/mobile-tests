@@ -1,10 +1,11 @@
-package browserstack.tests;
+package mobile.tests;
 
-import browserstack.drivers.BrowserstackMobileDriver;
+import mobile.drivers.BrowserstackMobileDriver;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import browserstack.helpers.Attach;
+import mobile.drivers.EmulationMobileDriver;
+import mobile.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,10 +15,18 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
     public class TestBase {
+
+        public static String deviceHost = System.getProperty("deviceHost");
         @BeforeAll
         static void beforeAll() {
 
-            Configuration.browser = BrowserstackMobileDriver.class.getName();
+            if (deviceHost.equals("emulation")) {
+                Configuration.browser = EmulationMobileDriver.class.getName();
+            } else {
+                if (deviceHost.equals("browserstack")) {
+                    Configuration.browser = BrowserstackMobileDriver.class.getName();
+                }
+            }
             Configuration.browserSize = null;
         }
 
